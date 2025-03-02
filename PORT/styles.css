@@ -1,0 +1,203 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.8;
+    background: #000;
+    color: #fff;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Background Animation - Subtle Wave Effect */
+.background-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #000, #222);
+    z-index: -1;
+    opacity: 0.8;
+    animation: waveShift 15s ease-in-out infinite;
+}
+
+@keyframes waveShift {
+    0% { transform: scale(1) translate(0, 0); }
+    50% { transform: scale(1.05) translate(20px, 20px); }
+    100% { transform: scale(1) translate(0, 0); }
+}
+
+/* Header Styling */
+header {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 4rem 1rem;
+    position: relative;
+    z-index: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+header h1 {
+    font-size: 3.2rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+header h1:hover {
+    transform: scale(1.05);
+}
+
+header p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    opacity: 0.7;
+}
+
+/* Section Styling */
+section {
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 1000px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+section:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-3px);
+}
+
+h2 {
+    color: #fff;
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h3 {
+    color: #ccc;
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin: 1rem 0 0.8rem;
+    text-transform: uppercase;
+}
+
+/* Education Section */
+#education ul {
+    margin-left: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin-left: 1rem;
+}
+
+ul li {
+    position: relative;
+    padding-left: 1.8rem;
+    margin-bottom: 0.7rem;
+    font-weight: 300;
+}
+
+ul li::before {
+    content: '—'; /* Dash instead of arrow for minimalist look */
+    position: absolute;
+    left: 0;
+    color: #ccc;
+    font-size: 1.2rem;
+}
+
+a {
+    color: #bbb;
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #fff;
+}
+
+/* Skills Section */
+.skills-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.skills-container div {
+    flex: 1;
+}
+
+.skills-container h3 {
+    color: #ccc;
+}
+
+/* Projects Section */
+.project {
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    transition: background 0.3s ease;
+}
+
+.project:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.project h3 {
+    color: #fff;
+    font-weight: 600;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: #000;
+    color: #fff;
+    font-size: 0.9rem;
+    position: relative;
+    z-index: 1;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .skills-container {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    header h1 {
+        font-size: 2.2rem;
+    }
+    header p {
+        font-size: 1rem;
+    }
+    section {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+    h2 {
+        font-size: 1.8rem;
+    }
+    h3 {
+        font-size: 1.2rem;
+    }
+}
